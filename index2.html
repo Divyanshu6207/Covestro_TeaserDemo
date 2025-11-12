@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Line Clamp Ellipsis Fix</title>
+    <link rel="stylesheet" href="css/pattern-library.min.css" />
+    <style>
+        .a-heading.a-heading--style4 {
+            font-size: 1.2rem;
+            line-height: 1.3em;
+            max-height: 2.6em;
+            /* 2 lines × 1.3em */
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            text-overflow: ellipsis;
+            margin-bottom: 24px !important;
+        }
+
+        .m-scrollable-teaser-item__description {
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            line-clamp: 4;
+            overflow: hidden;
+            max-height: 6.5em;
+        }
+
+        .container {
+            max-width: 90%;
+            margin: 2rem auto;
+            font-family: Arial, sans-serif;
+            display: inline-block;
+        }
+
+        .box {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+            flex-basis: 0;
+            width: 30%;
+            float: left;
+            margin-right: 2%;
+        }
+
+        .box p.m-scrollable-teaser-item__description {
+            margin-bottom: 32px !important;
+        }
+
+        .box2 .a-heading--style4 {
+            color: #03A9F4;
+        }
+
+        .box3 .a-heading--style4 {
+            color: #ab5906;
+        }
+
+        /* 
+        .box1 .a-heading.a-heading--style4 {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+
+          
+            text-overflow: clip !important;
+            -webkit-text-emphasis: none;
+
+            position: relative;
+        }
+
+        .box1 .a-heading.a-heading--style4::after {
+            content: '…';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(to right, transparent, white 50%);
+            padding-left: 0.2em;
+        }
+
+        .box2 .a-heading.a-heading--style4::after {
+            font-family: Arial, sans-serif !important;
+            content: '…';
+        } */
+        .box2 .a-heading.a-heading--style4 {
+            font-weight: 600;
+        }
+
+        /*   .box3 .a-heading.a-heading--style4 {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: clip;
+            position: relative;
+        }
+
+        .box3 .a-heading.a-heading--style4::after {
+            content: '…';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, transparent, #fff 50%);
+            padding-left: 0.25em;
+        } */
+
+        .box3 .a-heading.a-heading--style4 {
+
+            text-overflow: clip !important;
+            white-space: normal;
+            -webkit-text-emphasis: none !important;
+            text-emphasis: none !important;
+            position: relative;
+        }
+
+
+        .box3 .a-heading.a-heading--style4::after {
+            content: '…';
+            font-family: Arial, sans-serif;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding-left: 0.15em;
+            background: linear-gradient(to right, transparent, #fff 50%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box box1">
+            <h2 class="a-heading a-heading--style4">Matt soft-touch coating waterborne raw material solution for
+                smart
+                mirror</h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2 class="a-heading a-heading--style4">
+                This is a very long heading that will definitely be clamped to two lines and should have the ellipsis
+                applied correctly</h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2 class="a-heading a-heading--style4">Construction coatings with Pasquick® based products: KLB
+                Kötztal
+            </h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2 class="a-heading a-heading--style4">Waterborne & vegan: More sustainable synthetic textile coatings</h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2 class="a-heading a-heading--style4">
+                This is a heading that ends with a period. It should not show as ". ..."
+            </h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+        </div>
+
+        <div class="box box2">
+            <h2 class="a-heading a-heading--style4">Matt soft-touch coating waterborne raw material solution for
+                smart
+                mirror</h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2 class="a-heading a-heading--style4">
+                This is a very long heading that will definitely be clamped to two lines and should have the ellipsis
+                applied correctly</h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2 class="a-heading a-heading--style4">Construction coatings with Pasquick® based products: KLB
+                Kötztal
+            </h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2 class="a-heading a-heading--style4">Waterborne & vegan: More sustainable synthetic textile coatings</h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2 class="a-heading a-heading--style4">
+                This is a heading that ends with a period. It should not show as ". ..."
+            </h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+        </div>
+
+        <div class="box  box3">
+            <h2 class="a-heading a-heading--style4">Matt soft-touch coating waterborne raw material solution for
+                smart
+                mirror</h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2 class="a-heading a-heading--style4">
+                This is a very long heading that will definitely be clamped to two lines and should have the ellipsis
+                applied correctly</h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2 class="a-heading a-heading--style4">Construction coatings with Pasquick® based products: KLB
+                Kötztal
+            </h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2 class="a-heading a-heading--style4">Waterborne & vegan: More sustainable synthetic textile coatings</h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2 class="a-heading a-heading--style4">
+                This is a heading that ends with a period. It should not show as
+            </h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+
+            <h3 class="a-heading a-heading--style4 ">Low VOC water-based coatings with reduced carbon footprint</h3>
+
+            <p class="m-scrollable-teaser-item__description">
+                Bayhydur® quix&nbsp;ultra hardener enabled Hesse to develop a high performance, fast curing, low VOC
+                water-based
+                coating with up to 60% less CO₂ emissions than standard solvent-based coatings.
+            </p>
+
+
+
+            <h3 class="a-heading a-heading--style4 ">Waterborne &amp; vegan: More sustainable synthetic textile
+                coatings Waterborne &amp; vegan: More sustainable synthetic textile coatings</h3>
+            <p class="m-scrollable-teaser-item__description">Explore how we pioneered a vegan waterborne synthetic
+                coating system with Trans-Textil, to contribute to a more sustainable future for the textile
+                industry. Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to
+                contribute to a more sustainable future for the textile industry.</p>
+
+
+
+        </div>
+    </div>
+
+    <script>
+        /**
+         * Trims trailing punctuation and spaces before CSS line clamp ellipsis
+         * @param {string} selector - CSS selector for elements to apply fix (e.g., '.a-heading.a-heading--style4')
+         * @param {number} lineCount - Number of lines used in -webkit-line-clamp
+         */
+        function fixClampedEllipsis(selector, lineCount = 2) {
+            const elements = document.querySelectorAll(selector);
+
+            elements.forEach(el => {
+                const originalText = el.textContent.trim();
+
+                const computedStyle = getComputedStyle(el);
+                const lineHeight = parseFloat(computedStyle.lineHeight);
+                const maxHeight = lineHeight * lineCount;
+
+                // Temporarily remove max-height to measure scroll height
+                const prevMaxHeight = el.style.maxHeight;
+                el.style.maxHeight = 'none';
+
+                const isClamped = el.scrollHeight > maxHeight;
+
+                // Restore max-height
+                el.style.maxHeight = prevMaxHeight;
+
+                if (isClamped) {
+                    // Remove trailing punctuation, whitespace, or dots
+                    const cleaned = originalText.replace(/[\s.]+$/, '');
+                    el.textContent = cleaned;
+                }
+            });
+        }
+
+        // Run when DOM is ready
+        document.addEventListener('DOMContentLoaded', function () {
+            fixClampedEllipsis('.a-heading.a-heading--style4', 2);
+        });
+    </script>
+
+</body>
+
+</html>

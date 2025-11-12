@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truncated Cards (Title + Description)</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@500&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: 'Aktiv Grotesk';
+            src: url(AktivGrotesk-Regular.woff);
+        }
+
+        body {
+            
+            background: #f5f6fa;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+        
+                .inter-.card-container {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: regular;
+        }
+
+        .card {
+            background: #fff;
+            padding: 22px;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e4e4e7;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Title (h2) truncation - max 2 lines */
+        .card h2 {
+            /* font-size: 1.25rem;
+            font-weight: 500;
+            color: #111;
+            margin: 0 0 10px 0;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            /* Limit to 2 lines */
+            /* -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis; */ */
+
+        font-size: 1.2rem;
+        line-height: 1.3em;
+        max-height: 2.6em;
+        /* 2 lines × 1.3em */
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        text-overflow: ellipsis;
+        margin-bottom: 24px !important;
+          font-family: 'Inter', 'Helvetica Neue','Helvetica',  'Arial', sans-serif; 
+          font-weight: 500; 
+         }
+
+        /* Description (p) truncation - max 4 lines */
+        .card p {
+            /* font-size: 0.95rem;
+            font-weight: 500;
+            color: #444;
+            line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            /* Limit to 4 lines */
+            /* -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 0; */ */
+
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            line-clamp: 4;
+            overflow: hidden;
+            max-height: 6.5em;
+            font-family: 'Inter', 'Helvetica Neue','Helvetica',  'Arial', sans-serif;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h2>
+                The Future of Artificial Intelligence and Its Transformative Role in the Next Decade of Global
+                Innovation
+            </h2>
+            <p>
+                Artificial Intelligence (AI) is revolutionizing every sector—from healthcare and education to finance
+                and agriculture.
+                As we advance, the challenge lies in creating AI systems that are ethical, transparent, and beneficial
+                for humanity.
+                The coming decade will see a balance between automation and human creativity.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>
+                Exploring Climate Change Through Data and Predictive Environmental Models to Save Our Planet’s Future
+            </h2>
+            <p>
+                Climate data analytics have become crucial in understanding environmental changes.
+                Machine learning models now help predict rising temperatures and global patterns
+                These insights empower governments and communities to take meaningful, science-backed action before it’s
+                too late.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>
+                Mental Health and Digital Wellness: How to Stay Focused and Balanced in the Age of Technology
+            </h2>
+            <p>
+                Our increasing dependency on digital devices has both benefits and challenges.
+                While it connects us globally, it also causes burnout and reduced attention spans
+                Establishing digital boundaries, practicing mindfulness, and taking regular screen breaks can
+                significantly improve mental health.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Matt soft-touch coating waterborne raw material solution for
+                smart
+                mirror</h2>
+            <p>
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2>
+                This is a very long heading that will definitely be clamped to two lines and should have the ellipsis
+                applied correctly</h2>
+            <p>
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2>Construction coatings with Pasquick® based products KLB
+                Kötztal
+            </h2>
+            <p>
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2>Waterborne & vegan: More sustainable synthetic textile coatings</h2>
+            <p>
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2>
+                This is a heading that ends with a period. It should not show as ". ..."
+            </h2>
+            <p>
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Matt soft-touch coating waterborne raw material solution for
+                smart
+                mirror</h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2 class="a-heading a-heading--style4">
+                This is a very long heading that will definitely be clamped to two lines and should have the ellipsis
+                applied correctly</h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2 class="a-heading a-heading--style4">Construction coatings with Pasquick® based products: KLB
+                Kötztal
+            </h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2 class="a-heading a-heading--style4">Waterborne & vegan: More sustainable synthetic textile coatings</h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2 class="a-heading a-heading--style4">
+                This is a heading that ends with a period. It should not show as ". ..."
+            </h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+        </div>
+        
+        <div class="card">
+            <h2 class="a-heading a-heading--style4">Matt soft-touch coating waterborne raw material solution for
+                smart
+                mirror</h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2 class="a-heading a-heading--style4">
+                This is a very long heading that will definitely be clamped to two lines and should have the ellipsis
+                applied correctly</h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2 class="a-heading a-heading--style4">Construction coatings with Pasquick® based products: KLB
+                Kötztal
+            </h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2 class="a-heading a-heading--style4">Waterborne & vegan: More sustainable synthetic textile coatings</h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+            <h2 class="a-heading a-heading--style4">
+                This is a heading that ends with a period. It should not show as
+            </h2>
+            <p class="m-scrollable-teaser-item__description">
+                Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to contribute to
+                a more
+                sustainable future for the textile industry.
+            </p>
+        
+            <h2>Low VOC water-based coatings with reduced carbon footprint</h2>
+        
+            <p>
+                Bayhydur® quix&nbsp;ultra hardener enabled Hesse to develop a high performance, fast curing, low VOC
+                water-based
+                coating with up to 60% less CO₂ emissions than standard solvent-based coatings.
+            </p>
+        
+        
+        
+            <h2>Waterborne &amp; vegan: More sustainable synthetic textile
+                coatings Waterborne &amp; vegan: More sustainable synthetic textile coatings</h3>
+            <p class="m-scrollable-teaser-item__description">Explore how we pioneered a vegan waterborne synthetic
+                coating system with Trans-Textil, to contribute to a more sustainable future for the textile
+                industry. Explore how we pioneered a vegan waterborne synthetic coating system with Trans-Textil, to
+                contribute to a more sustainable future for the textile industry.</p>
+        
+        
+        
+        </div>
+
+    </div>
+
+</body>
+
+</html>
