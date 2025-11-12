@@ -114,3 +114,4 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("✅ Robust 2-line truncation initialized for", SELECTOR);
 })();
 
+console.log("Hello World!");
